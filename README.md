@@ -1,6 +1,12 @@
 # Hi
 
-I'm an electrical engineer. Most of my day job is around data centers and energy projects, and I write software to take the tedious parts out of that work. A couple of things here are finished, one is still in progress. Everything public uses made-up sample data.
+I'm an electrical engineer. Most of my day job is around data centers and energy projects, and I write software to take the tedious parts out of that work. Most of what's here is finished; one project is still in progress. Everything public uses made-up sample data.
+
+## [Data Center Electrical Digital Twin](https://github.com/NishikawaButterfly/dc-twin)
+
+A deterministic capacity simulator for data-center electrical architectures. You describe a topology (utility feeds, generators, UPS, transfer switches, PDUs, loads) and a scenario of failures and maintenance windows, and it returns a timeline of which loads stayed served, when each UPS ran down, and what caused every alarm. The same inputs always produce the same result hash, so any run can be replayed and verified. The reference scenario's numbers are checked against a hand calculation, and all of the data is synthetic.
+
+Python, FastAPI for the read-only API, a plain JavaScript web explorer, PostgreSQL for stored runs. Ships with Docker Compose.
 
 ## [Electrical Asset Validator](https://github.com/NishikawaButterfly/electrical-asset-validator)
 
