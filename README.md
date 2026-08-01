@@ -12,7 +12,7 @@ Python, FastAPI for the read-only API, a plain JavaScript web explorer, PostgreS
 
 A web app for checking electrical asset registers before they get handed between teams. You upload a CSV or XLSX file, it validates a nine-column format and flags duplicate tags, missing panel or circuit references, and out-of-range voltage and power values. It can also diff two revisions of the same register by asset tag, so you can see exactly which assets were added, removed or changed. Results export to PDF or XLSX.
 
-FastAPI backend, React + TypeScript frontend, PostgreSQL. Starts with one `docker compose up`. Sample registers with deliberate errors are included so you can try it without your own data.
+FastAPI backend, React + TypeScript frontend, PostgreSQL. Starts with one `docker compose up`. Sample registers with deliberate errors are included so you can try it without your own data, or you can use the live demo at https://electrical-asset-validator.fly.dev/.
 
 ## [Sudoku PWA](https://github.com/NishikawaButterfly/sudoku-pwa)
 
