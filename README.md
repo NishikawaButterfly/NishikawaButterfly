@@ -20,9 +20,19 @@ A sudoku game as an installable progressive web app. The first version was a sin
 
 Six difficulty levels, 24 puzzles (each checked to have exactly one solution), notes, hints, undo. Works offline and saves progress locally. No accounts, no tracking. Plain JavaScript, no framework. Tested with Playwright.
 
-## In progress: [PV-BESS dispatch model](https://github.com/NishikawaButterfly/pv-bess-hybrid)
+## [PV-BESS dispatch model](https://github.com/NishikawaButterfly/pv-bess-hybrid)
 
 A Python model for solar plants with battery storage. It reads hourly PV production and market prices, computes a dispatch schedule for the battery (a mixed-integer program solved with HiGHS), and works out NPV, IRR, payback and LCOS for the scenario. I rebuilt it from an older prototype after finding calculation errors in the original, so it is deliberately small and heavily tested. It now has an API and a small web page that renders the result as charts; there is a live explorer at https://pv-bess-hybrid.fly.dev/ and solver benchmarks in the docs.
+
+## In progress: [Energy Investment Lab](https://github.com/NishikawaButterfly/energy-investment-lab)
+
+A cash-flow and financing model for energy assets, in plain Python with no
+runtime dependencies. It handles escalated revenues and costs, annuity debt
+with DSCR, corporate tax with depreciation and loss carryforward, MIRR,
+levelized cost, one-at-a-time sensitivities, and a seeded Monte Carlo whose
+results are reproducible to the byte. One scenario file in, a results file
+and a committee-style report out. Every worked example in the docs is
+hand-calculated and pinned by tests.
 
 ## Tools
 
