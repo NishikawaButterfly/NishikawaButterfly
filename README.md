@@ -22,7 +22,7 @@ Six difficulty levels, 24 puzzles (each checked to have exactly one solution), n
 
 ## In progress: [PV-BESS dispatch model](https://github.com/NishikawaButterfly/pv-bess-hybrid)
 
-A Python model for solar plants with battery storage. It reads hourly PV production and market prices, computes a dispatch schedule for the battery (a small mixed-integer program solved with HiGHS), and works out NPV, IRR and payback for the scenario. I rebuilt it from an older prototype after finding calculation errors in the original, so the current version is deliberately small and has a proper test suite. Early alpha, command-line only, one scenario at a time.
+A Python model for solar plants with battery storage. It reads hourly PV production and market prices, computes a dispatch schedule for the battery (a mixed-integer program solved with HiGHS), and works out NPV, IRR, payback and LCOS for the scenario. I rebuilt it from an older prototype after finding calculation errors in the original, so it is deliberately small and heavily tested. It now has an API and a small web page that renders the result as charts; there is a live explorer at https://pv-bess-hybrid.fly.dev/ and solver benchmarks in the docs.
 
 ## Tools
 
