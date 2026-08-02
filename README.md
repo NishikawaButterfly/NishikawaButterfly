@@ -24,6 +24,17 @@ Six difficulty levels, 24 puzzles (each checked to have exactly one solution), n
 
 A Python model for solar plants with battery storage. It reads hourly PV production and market prices, computes a dispatch schedule for the battery (a mixed-integer program solved with HiGHS), and works out NPV, IRR, payback and LCOS for the scenario. I rebuilt it from an older prototype after finding calculation errors in the original, so it is deliberately small and heavily tested. It now has an API and a small web page that renders the result as charts; there is a live explorer at https://pv-bess-hybrid.fly.dev/ and solver benchmarks in the docs.
 
+## [Critical Facilities Manager](https://github.com/NishikawaButterfly/critical-facilities-manager)
+
+An operations and commissioning platform for critical facilities, developed
+and tested privately and now public. Locations, assets, and maintenance
+orders with validated state machines; MOP/SOP/EOP procedures with four-eyes
+approval; work permits that block completing an order while one is open;
+mutual-exclusion constraints that stop simultaneous maintenance on redundant
+equipment; commissioning tests with witnessed evidence; and an append-only
+audit trail behind every write. Bearer-token auth with roles. FastAPI,
+SQLAlchemy, 237 tests, all sample data synthetic.
+
 ## In progress: [Energy Investment Lab](https://github.com/NishikawaButterfly/energy-investment-lab)
 
 A cash-flow and financing model for energy assets, in plain Python with no
