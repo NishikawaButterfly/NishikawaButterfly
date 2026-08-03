@@ -1,6 +1,6 @@
 # Hi
 
-I'm an electrical engineer. Most of my day job is around data centers and energy projects, and I write software to take the tedious parts out of that work. Most of what's here is finished; one project is still in progress. Everything public uses made-up sample data.
+I'm an electrical engineer. Most of my day job is around data centers and energy projects, and I write software to take the tedious parts out of that work. Everything public here has a tagged release and uses made-up sample data.
 
 ## [Data center electrical simulator](https://github.com/NishikawaButterfly/dc-twin)
 
@@ -35,7 +35,7 @@ equipment; commissioning tests with witnessed evidence; and an append-only
 audit trail behind every write. Bearer-token auth with roles. FastAPI,
 SQLAlchemy, 237 tests, all sample data synthetic.
 
-## In progress: [Energy Investment Lab](https://github.com/NishikawaButterfly/energy-investment-lab)
+## [Energy Investment Lab](https://github.com/NishikawaButterfly/energy-investment-lab)
 
 A cash-flow and financing model for energy assets, in plain Python with no
 runtime dependencies. It handles escalated revenues and costs, annuity debt
@@ -44,6 +44,17 @@ levelized cost, one-at-a-time sensitivities, and a seeded Monte Carlo whose
 results are reproducible to the byte. One scenario file in, a results file
 and a committee-style report out. Every worked example in the docs is
 hand-calculated and pinned by tests.
+
+## [Quant Risk Engine](https://github.com/NishikawaButterfly/quant-risk-engine)
+
+A portfolio-analytics and market-risk engine, and deliberately not a
+prediction tool. Validated price series, the standard risk metrics with
+every convention documented, risk contributions that sum to one, an
+efficient frontier checked against its closed form, backtesting where
+looking ahead is impossible by construction rather than forbidden by
+discipline, seeded Monte Carlo, stress windows and shocks, and a CLI
+whose report is byte-identical across runs. Every worked example in the
+docs is hand-calculated and pinned by tests.
 
 ## Tools
 
