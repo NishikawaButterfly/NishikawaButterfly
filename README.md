@@ -1,65 +1,54 @@
-# Hi
+# Ricardo — Electrical Engineer & Engineering Software Developer
 
-I'm an electrical engineer. Most of my day job is around data centers and energy projects, and I write software to take the tedious parts out of that work. Everything public here has a tagged release and uses made-up sample data.
+I build tested software for data-center electrical systems, critical
+facilities, energy storage and quantitative analysis.
 
-## [Data center electrical simulator](https://github.com/NishikawaButterfly/dc-twin)
+[Portfolio](https://nishikawabutterfly.github.io/) · [All projects](https://github.com/NishikawaButterfly?tab=repositories) · [Contact](mailto:nishikawa.butterfly@gmail.com)
 
-A deterministic capacity simulator for data-center electrical architectures. You describe a topology (utility feeds, generators, UPS, transfer switches, PDUs, loads) and a scenario of failures and maintenance windows, and it returns a timeline of which loads stayed served, when each UPS ran down, and what caused every alarm. The same inputs always produce the same result hash, so any run can be replayed and verified. The reference scenario's numbers are checked against a hand calculation, and all of the data is synthetic.
+## Selected work
 
-Python, FastAPI for the read-only API, a plain JavaScript web explorer, PostgreSQL for stored runs. Ships with Docker Compose, and there is a live explorer at https://dc-twin.fly.dev/ with the reference scenarios.
+### [dc-twin](https://github.com/NishikawaButterfly/dc-twin)
 
-## [Electrical Asset Validator](https://github.com/NishikawaButterfly/electrical-asset-validator)
+A deterministic capacity simulator for data-center electrical
+architectures. You describe a topology — utility feeds, generators, UPS,
+transfer switches, PDUs, loads — and a scenario of failures and
+maintenance windows, and it returns which loads stayed served, when each
+UPS ran down, and what caused every alarm. The same inputs always
+produce the same result hash, the reference scenarios are checked
+against hand calculations, and there is a live explorer at
+https://dc-twin.fly.dev/.
 
-A web app for checking electrical asset registers before they get handed between teams. You upload a CSV or XLSX file, it validates a nine-column format and flags duplicate tags, missing panel or circuit references, and out-of-range voltage and power values. It can also diff two revisions of the same register by asset tag, so you can see exactly which assets were added, removed or changed. Results export to PDF or XLSX.
+### [Electrical Asset Validator](https://github.com/NishikawaButterfly/electrical-asset-validator)
 
-FastAPI backend, React + TypeScript frontend, PostgreSQL. Starts with one `docker compose up`. Sample registers with deliberate errors are included so you can try it without your own data, or you can use the live demo at https://electrical-asset-validator.fly.dev/.
+A web app for checking electrical asset registers before they get handed
+between teams. You upload a CSV or XLSX file — mapping nonstandard
+columns if needed — and it flags duplicate tags, missing panel or
+circuit references, and out-of-range voltage and power values. It can
+also diff two revisions of the same register by asset tag, and results
+export to PDF or XLSX reports. There is a live demo at
+https://electrical-asset-validator.fly.dev/.
 
-## [Sudoku PWA](https://github.com/NishikawaButterfly/sudoku-pwa)
+### [Critical Facilities Manager](https://github.com/NishikawaButterfly/critical-facilities-manager)
 
-A sudoku game as an installable progressive web app. The first version was a single HTML file, but some messaging apps opened it in a restricted preview where the JavaScript couldn't run, so I rebuilt it as a proper PWA.
+An operations and commissioning platform for critical facilities,
+developed and tested privately and now public. Locations, assets, and
+maintenance orders move through validated state machines; procedures
+carry four-eyes approval; work permits and mutual-exclusion constraints
+block unsafe combinations, like simultaneous maintenance on redundant
+equipment; and an append-only audit trail sits behind every write.
 
-Six difficulty levels, 24 puzzles (each checked to have exactly one solution), notes, hints, undo. Works offline and saves progress locally. No accounts, no tracking. Plain JavaScript, no framework. Tested with Playwright.
+### [PV-BESS Dispatch Model](https://github.com/NishikawaButterfly/pv-bess-hybrid)
 
-## [PV-BESS dispatch model](https://github.com/NishikawaButterfly/pv-bess-hybrid)
+A Python model for solar plants with battery storage. It reads hourly PV
+production and market prices, computes the battery's dispatch schedule
+as a mixed-integer program solved with HiGHS, and works out NPV, IRR,
+payback and LCOS for the scenario. I rebuilt it from an older prototype
+after finding calculation errors in the original, so it is deliberately
+small and heavily tested, with solver benchmarks in the docs and a live
+explorer at https://pv-bess-hybrid.fly.dev/.
 
-A Python model for solar plants with battery storage. It reads hourly PV production and market prices, computes a dispatch schedule for the battery (a mixed-integer program solved with HiGHS), and works out NPV, IRR, payback and LCOS for the scenario. I rebuilt it from an older prototype after finding calculation errors in the original, so it is deliberately small and heavily tested. It now has an API and a small web page that renders the result as charts; there is a live explorer at https://pv-bess-hybrid.fly.dev/ and solver benchmarks in the docs.
+## Other projects
 
-## [Critical Facilities Manager](https://github.com/NishikawaButterfly/critical-facilities-manager)
+[Energy Investment Lab](https://github.com/NishikawaButterfly/energy-investment-lab) · [Quant Risk Engine](https://github.com/NishikawaButterfly/quant-risk-engine) · [Sudoku Instant](https://github.com/NishikawaButterfly/sudoku-pwa) — a cash-flow and financing model for energy assets, a portfolio-analytics and risk engine, and a finished offline-capable sudoku PWA.
 
-An operations and commissioning platform for critical facilities, developed
-and tested privately and now public. Locations, assets, and maintenance
-orders with validated state machines; MOP/SOP/EOP procedures with four-eyes
-approval; work permits that block completing an order while one is open;
-mutual-exclusion constraints that stop simultaneous maintenance on redundant
-equipment; commissioning tests with witnessed evidence; and an append-only
-audit trail behind every write. Bearer-token auth with roles. FastAPI,
-SQLAlchemy, 237 tests, all sample data synthetic.
-
-## [Energy Investment Lab](https://github.com/NishikawaButterfly/energy-investment-lab)
-
-A cash-flow and financing model for energy assets, in plain Python with no
-runtime dependencies. It handles escalated revenues and costs, annuity debt
-with DSCR, corporate tax with depreciation and loss carryforward, MIRR,
-levelized cost, one-at-a-time sensitivities, and a seeded Monte Carlo whose
-results are reproducible to the byte. One scenario file in, a results file
-and a committee-style report out. Every worked example in the docs is
-hand-calculated and pinned by tests.
-
-## [Quant Risk Engine](https://github.com/NishikawaButterfly/quant-risk-engine)
-
-A portfolio-analytics and market-risk engine, and deliberately not a
-prediction tool. Validated price series, the standard risk metrics with
-every convention documented, risk contributions that sum to one, an
-efficient frontier checked against its closed form, backtesting where
-looking ahead is impossible by construction rather than forbidden by
-discipline, seeded Monte Carlo, stress windows and shocks, and a CLI
-whose report is byte-identical across runs. Every worked example in the
-docs is hand-calculated and pinned by tests.
-
-## Tools
-
-Python (pandas, FastAPI), TypeScript and React for frontends, plain JavaScript when a framework would be overkill, PostgreSQL, Docker, GitHub Actions for CI.
-
-## Contact
-
-nishikawa.butterfly@gmail.com
+Everything public here has a tagged release, and all sample data is fictional.
