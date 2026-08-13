@@ -58,4 +58,4 @@ explorer at https://pv-bess-hybrid.fly.dev/.
 
 [Energy Investment Lab](https://github.com/NishikawaButterfly/energy-investment-lab) · [Quant Risk Engine](https://github.com/NishikawaButterfly/quant-risk-engine) · [Sudoku Instant](https://github.com/NishikawaButterfly/sudoku-pwa) — a cash-flow and financing model for energy assets, a portfolio-analytics and risk engine, and a finished offline-capable sudoku PWA.
 
-Everything public here has a tagged release, and all sample data is fictional.
+Every project listed above has a tagged release, and all sample data is fictional.
