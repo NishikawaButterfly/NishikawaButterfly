@@ -1,4 +1,4 @@
-# Ricardo — Electrical Engineer & Engineering Software Developer
+# Electrical Engineer & Engineering Software Developer
 
 I build tested software for data-center electrical systems, critical
 facilities, energy storage and quantitative analysis.
