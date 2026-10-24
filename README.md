@@ -3,7 +3,7 @@
 I build tested software for data-center electrical systems, critical
 facilities, energy storage and quantitative analysis.
 
-[Portfolio](https://nishikawabutterfly.github.io/) · [All projects](https://github.com/NishikawaButterfly?tab=repositories) · [Contact](mailto:nishikawa.butterfly@gmail.com)
+[Portfolio](https://nishikawabutterfly.github.io/) · [All projects](https://github.com/NishikawaButterfly?tab=repositories) · [Contact](https://nishikawabutterfly.github.io/contact.html)
 
 ## Selected work
 
